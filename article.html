@@ -1,0 +1,206 @@
+<!-- Rafael, George y Jaime -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css">
+    <title>Article</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div>
+                    <a href="index.html"><img src="static/img/logo.png" height="50px"></a>
+                </div>
+                <!-- <div class="name">
+                        <span>
+                            MonoDev
+                        </span>
+                    </div> -->
+            </div>
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-solid fa-rss"></i> Blog</a>
+                <a href="#"><i class="fa-solid fa-comments"></i> Forum</a>
+                <a href="form.html"><i class="fa-solid fa-circle-user"></i> My Account</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div id="burger-icon">
+                    <!-- onclick="toggle(this)" -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="#"><i class="fa-solid fa-rss"></i> Blog</a></li>
+                        <li><a href="#"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                        <li><a href="#"><i class="fa-solid fa-circle-user"></i> My account</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="article-container-outer">
+            <h1>CSS Grid Layout Module: Intro</h1>
+            <p class="name"><b>By: </b>Juanito Alimaña</p>
+            <div class="article-container">
+                <div class="article-nav">
+                    <div class="article-nav-inner">
+                        <ul>
+                            <a href="#layout"><li>Grid Layout</li></a>
+                            <a href="#support"><li>Browser Support</li></a>
+                            <a href="#terminology"><li>Grid Terminology</li></a>
+                            <a href="#example"><li>Example</li></a>
+                            <a href="#display"><li>Display Property</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="article-content-container">
+                    <img src="static/img/grid.png" class="article-media-main" alt="Grid Image">
+                    <!-- <a data-fslightbox href="static/img/grid.png" type="image">
+                        <img src="static/img/grid.png" class="article-media-main">
+                    </a> -->
+                    <div class="article-content">
+                        <h3 id="layout">Grid Layout</h3>
+                        <p>
+                            Grid, unlike flex, is a two dimensional layout system that completely changes the way to
+                            design
+                            interfaces. It was made to solve all the former problems that the other methods had.
+                        </p>
+                        <h3 id="support">Browser Support</h3>
+                        <p>The grid properties are supported in every browser updated after March 2017. Every browser
+                            since then supports native and uprefixed CSS Grid properties.</p>
+                        <div class="article-media">
+                            <img src="static/img/grid-support.png" alt="Browsers that support grid natively">
+                        </div>
+                        <h3 id="terminology">Grid Terminology</h3>
+                        <ul class="list">
+                            <li><b>Grid Container</b>: The element that has the <span class="inline-code">display</span>
+                                property
+                                with the <span class="inline-code">grid</span> or <span
+                                    class="inline-code">inline-grid</span> value. It's the direct parent to all of the
+                                grid
+                                items.</li>
+                            <li><b>Grid Item</b>: Any direct child of the grid container element. The child of a grid
+                                item
+                                won't
+                                become a grid item.</li>
+                            <li><b>Grid Line</b>: Invisible element that separates each grid cell from each other. These
+                                can
+                                be vertical or horizontal.</li>
+                            <li><b>Grid Cell</b>: The grid item, a single unit in the grid container, located between
+                                two
+                                adjacent row grid lines and two adjacent column grid lines.</li>
+                            <li><b>Gutter</b>: Space between each row and column in a grid.</li>
+                        </ul>
+                        <h3 id="example">Example</h3>
+                        <p>HTML</p>
+                        <pre class="code">
+&lt;div class=&quot;grid-container&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;This is a grid item&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;This is a grid item&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;This is a grid item&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+        This is a grid item
+        &lt;div&gt;&lt;/div&gt; &lt;!-- This is not a grid item --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                        <p>CSS</p>
+                        <pre class="code">
+body {
+    background-color: #333;
+}
+
+.grid-container {
+    font-family: Consolas;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    background-color: #ddd;
+    padding: 10px;
+}
+                        </pre>
+                        <p>Result</p>
+                        <div class="grid-container">
+                            <div class="item">This is a grid item</div>
+                            <div class="item">This is a grid item</div>
+                            <div class="item">This is a grid item</div>
+                            <div class="item">
+                                This is a grid item
+                                <div></div> <!-- This is not a grid item -->
+                            </div>
+                        </div>
+                        <!-- Continue  here -->
+                        <h3 id="display">Display Property</h3>
+                        <p>An HTML element becomes a grid container when its <span class="inline-code">display</span>
+                            property is set to <span class="inline-code">grid</span> or <span
+                                class="inline-code">inline-grid</span>.</p>
+                        <p>All direct children of the grid container automatically become grid items.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+            <div class="left">
+                <div class="logocontainer">
+                    <img src="static/img/logo.png" alt="Logo" class="logo">
+                    <span>Nulla id metus libero. Etiam varius tristique molestie.</span>
+                </div>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="middle">
+                <ul>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>Login</li></a>
+                    <a href="#"><li>Register</li></a>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <a href="#"><li>Cookies</li></a>
+                    <a href="#"><li>We care about your privacy</li></a>
+                    <a href="#"><li>Advertise with us</li></a>
+                </ul>
+            </div>
+        </footer>
+    <script>
+        document.getElementById("burger-icon").onclick = function () {
+            var icon = document.getElementById("burger-icon");
+            var ul = icon.getElementsByClassName("mobile-menu")[0];
+            if (icon.classList.contains("open")) {
+                /* if (ul.classList.contains("fade")) {
+                    ul.classList.toggle("fade");
+                } */
+                icon.classList.toggle("open");
+                /* ul.classList.toggle("fade"); */
+                ul.style.display = "none";
+            } else {
+                /* if (ul.classList.contains("fade")) {
+                    ul.classList.toggle("fade");
+                } */
+                ul.style.display = "block";
+                icon.classList.toggle("open");
+
+            }
+
+        }
+        
+    </script>
+</body>
+
+</html>

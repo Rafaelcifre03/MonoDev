@@ -1,0 +1,173 @@
+<!-- Rafael, George y Jaime -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="container audio">
+        <header>
+            <div class="logo">
+                <div>
+                    <a href="index.html"><img src="static/img/logo.png" height="50px"></a>
+                </div>
+                <!-- <div class="name">
+                    <span>
+                        MonoDev
+                    </span>
+                </div> -->
+            </div>
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#"><i class="fa-solid fa-rss"></i> Blog</a>
+                <a href="#"><i class="fa-solid fa-comments"></i> Forum</a>
+                <a href="form.html"><i class="fa-solid fa-circle-user"></i> My Account</a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div id="burger-icon">
+                    <!-- onclick="toggle(this)" -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <ul class="mobile-menu" style="display: none;">
+                        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="#"><i class="fa-solid fa-rss"></i> Blog</a></li>
+                        <li><a href="#"><i class="fa-solid fa-comments"></i> Forum</a></li>
+                        <li><a href="form.html"><i class="fa-solid fa-circle-user"></i> My account</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="formDiv">
+            <img class="imgForm" src="./static/img/imagenForm.jpg" height="500px" width="350px">
+            <div class="FormFlex">
+                <h1>Register form</h1>
+                <form action="">
+                    <div class="formcontainer"><label for="nombre">Name</label>
+                        <input id="nombre" type="text" name="nombre" minlength="3" maxlength="60"
+                            placeholder="Nombre(s)" pattern="[a-zA-ZñÑ ]*" required>
+
+                        <label for="apellido">Surname</label>
+                        <input id="apellido" type="text" name="nombre" minlength="3" maxlength="60"
+                            placeholder="Apellido(s)" pattern="[a-zA-ZñÑ ]*" required>
+
+                        <label for="dni">ID</label>
+                        <input id="dni" type="text" name="dni" minlength="9" maxlength="9" placeholder="99999999R"
+                            pattern="^[0-9]{8}[A-Z]$" required>
+
+                        <label for="contrasena">password</label>
+                        <input id="contrasena" type="text" name="contrasena" minlength=8 maxlength="14"
+                            placeholder="contraseña" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])    \S{5,12}$" required>
+
+                        <label for="email">email</label>
+                        <input id="email" type="text" name="email" minlength="5" maxlength="60"
+                            placeholder="email_1@gmail.com" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,64}$"
+                            required>
+
+                        <label for="telefono">phone</label>
+                        <input id="telefono" type="text" name="telefono" minlength="9" maxlength="12" placeholder="+34"
+                            pattern="^(\+34|0034|34)?[6|7|8|9][0-9]{8}$">
+
+                        <label for="fecha">Date</label>
+                        <input id="fecha" type="date" name="fecha" maxlength="10">
+
+                        <label for="edad">Age</label>
+                        <input id="edad" type="text" name="edad" minlength=1 maxlength="3" placeholder="200"
+                            pattern="^[0-9]*$">
+
+                        <label>Gender</label>
+                        <div>
+                            <p class="radio">Male:</p><input class="radio" type="radio" name="sexo" value="M">
+                            <p class="radio">Female:</p><input class="radio" type="radio" name="sexo" value="F">
+                        </div>
+
+                        <label>Country</label>
+                        <select name="nacionalidad" required>
+                            <option value="ArribaEspaña">España</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="McQueen">McQueenLand</option>
+                            <option value="ah">ah?</option>
+                        </select>
+                    </div>
+                    <div class="terminos">
+                        <label for="terminos">I agree privacy terms</label>
+                        <input id="terminos" type="checkbox" name="terminos" required> <br><br>
+                    </div>
+
+
+                    <br><input type="submit" name="boton" id="enviarFormulario">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="left">
+            <div class="logocontainer">
+                <img src="static/img/logo.png" alt="Logo" class="logo">
+                <span>Nulla id metus libero. Etiam varius tristique molestie.</span>
+            </div>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+        <div class="middle">
+            <ul>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+                <a href="#">
+                    <li>Login</li>
+                </a>
+                <a href="#">
+                    <li>Register</li>
+                </a>
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                <a href="#">
+                    <li>Cookies</li>
+                </a>
+                <a href="#">
+                    <li>We care about your privacy</li>
+                </a>
+                <a href="#">
+                    <li>Advertise with us</li>
+                </a>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("burger-icon").onclick = function () {
+            var icon = document.getElementById("burger-icon");
+            var ul = icon.getElementsByClassName("mobile-menu")[0];
+            if (icon.classList.contains("open")) {
+                /* if (ul.classList.contains("fade")) {
+                    ul.classList.toggle("fade");
+                } */
+                icon.classList.toggle("open");
+                /* ul.classList.toggle("fade"); */
+                ul.style.display = "none";
+            } else {
+                /* if (ul.classList.contains("fade")) {
+                    ul.classList.toggle("fade");
+                } */
+                ul.style.display = "block";
+                icon.classList.toggle("open");
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

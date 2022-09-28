@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-color: #333; */
+        }
+        .grid-container {
+            font-family: Consolas;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .item {
+            background-color: #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item">This is a grid item</div>
+        <div class="item">This is a grid item</div>
+        <div class="item">This is a grid item</div>
+        <div class="item">
+            This is a grid item
+            <div></div> <!-- This is not a grid item -->
+        </div>
+    </div>
+</body>
+
+</html>
