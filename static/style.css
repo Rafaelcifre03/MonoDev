@@ -1,0 +1,986 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*
+                                          .__   
+   ____   ____   ____   ________________  |  |  
+  / ___\_/ __ \ /    \_/ __ \_  __ \__  \ |  |  
+ / /_/  >  ___/|   |  \  ___/|  | \// __ \|  |__
+ \___  / \___  >___|  /\___  >__|  (____  /____/
+/_____/      \/     \/     \/           \/      
+*/
+
+/* ? ********************** GENERAL STYLES START **********************/
+
+* {
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(4, 31, 71);
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    padding: 10px 10% 10px 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px 5%;
+    }
+}
+
+/* ? ********************** GENERAL STYLES END **********************/
+
+/*
+.__                       .___            
+|  |__   ____ _____     __| _/___________ 
+|  |  \_/ __ \\__  \   / __ |/ __ \_  __ \
+|   Y  \  ___/ / __ \_/ /_/ \  ___/|  | \/
+|___|  /\___  >____  /\____ |\___  >__|   
+     \/     \/     \/      \/    \/       
+*/
+
+/* ? ********************** HEADER START **********************/
+
+header {
+    display: flex;
+}
+
+header .logo {
+    flex: 0 0 20%;
+}
+
+header .logo img {
+    padding: 5px;
+}
+
+header .logo img:hover {
+    background-color: rgb(4, 21, 48);
+    border-radius: 6px;
+}
+
+.name {
+    margin-left: 20px;
+}
+
+header nav {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    color: #fff;
+}
+
+header nav a {
+    padding: 13px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav a:visited {
+    color: #fff;
+}
+
+header nav a:hover {
+    background-color: rgb(4, 21, 48);
+}
+
+/*
+___.                                     
+\_ |__  __ _________  ____   ___________ 
+ | __ \|  |  \_  __ \/ ___\_/ __ \_  __ \
+ | \_\ \  |  /|  | \/ /_/  >  ___/|  | \/
+ |___  /____/ |__|  \___  / \___  >__|   
+     \/            /_____/      \/       
+*/
+
+/**************************** START BURGER *************************/
+
+#burger-icon {
+    margin: auto 0;
+    display: none;
+    /* cursor: context-menu; */
+    cursor: pointer;
+}
+
+#burger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+.open .bar1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    transform: rotate(45deg) translate(-6px, -7px);
+}
+
+.open .mobile-menu {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; */
+    display: block;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+.mobile-menu {
+    background-color: #041F47;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    /* top: 50px; */
+    left: 0;
+    /* height: calc(100vh - 50px); */
+    padding: 25px 15%;
+    width: 100%;
+    list-style-type: none;
+}
+
+.mobile-menu li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+}
+
+.mobile-menu li:hover {
+    background-color: #062a5f;
+}
+
+/* .mobile-menu li:nth-child(odd) {
+    background-color: #041F47;
+}
+
+.mobile-menu li:nth-child(even) {
+    background-color: #062a5f;
+} */
+
+.fade {
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+/**************************** END BURGER *************************/
+
+@media screen and (max-width: 1000px) {
+    header nav>a {
+        display: none;
+    }
+
+    header nav a:hover {
+        background-color: transparent;
+    }
+
+    header nav a {
+        font-size: 18px;
+    }
+
+    #burger-icon {
+        display: block;
+    }
+}
+
+/* ? ********************** HEADER END **********************/
+
+/*
+          __                 __   
+  _______/  |______ ________/  |_ 
+ /  ___/\   __\__  \\_  __ \   __\
+ \___ \  |  |  / __ \|  | \/|  |  
+/____  > |__| (____  /__|   |__|  
+     \/            \/             
+*/
+
+/* ? ********************** FIRST IMPRESSION (1st BLOCK) START **********************/
+
+div.title {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+
+}
+
+div.title h1 {
+    font-size: 76px;
+    color: #fff;
+    text-align: center;
+}
+
+div.title a {
+    border-radius: 7px;
+    background-color: #2C96D1;
+    font-size: 32px;
+    border: none;
+    color: #fff;
+    padding: 10px 30px 10px 30px;
+}
+
+@media (max-width: 1000px) {
+    div.title {
+        padding-bottom: 100px;
+    }
+}
+
+/* ? ********************** FIRST IMPRESSION (1st BLOCK) END **********************/
+
+/*
+               __                             .__               
+  ____ _____ _/  |_  ____   ____   ___________|__| ____   ______
+_/ ___\\__  \\   __\/ __ \ / ___\ /  _ \_  __ \  |/ __ \ /  ___/
+\  \___ / __ \|  | \  ___// /_/  >  <_> )  | \/  \  ___/ \___ \ 
+ \___  >____  /__|  \___  >___  / \____/|__|  |__|\___  >____  >
+     \/     \/          \/_____/                      \/     \/ 
+*/
+
+/* ? ********************** 2nd BLOCK START (CATEGORIES) **********************/
+
+div.categories {
+    background-color: #131c29;
+    padding: 5% 15% 5% 15%;
+}
+
+div.cat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 30px;
+    row-gap: 50px;
+}
+
+div.category {
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 30px;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #fff;
+    color: rgb(255, 255, 255);
+}
+
+div.category:hover {
+    transform: translate(2px, 4px);
+}
+
+#category1 {
+    background-color: #3496ce;
+}
+
+#category1:hover {
+    background-color: #236388;
+}
+
+#category2 {
+    background-color: #409b00;
+}
+
+#category2:hover {
+    background-color: #1a3d00;
+}
+
+#category3 {
+    background-color: #fd9f39;
+}
+
+#category3:hover {
+    background-color: #b66916;
+}
+
+#category4 {
+    background-color: #ff4d43;
+}
+
+#category4:hover {
+    background-color: #b1261f;
+}
+
+#category5 {
+    background-color: #ff338f;
+}
+
+#category5:hover {
+    background-color: #a1205a;
+}
+
+#category6 {
+    background-color: #5234ce;
+}
+
+#category6:hover {
+    background-color: #291969;
+}
+
+@media (max-width: 1000px) {
+    div.cat-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    div.cat-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ? ********************** 2ยบ BLOCK END (CATEGORIES)**********************/
+
+/*
+___.                    __   
+\_ |__   ____   _______/  |_ 
+ | __ \_/ __ \ /  ___/\   __\
+ | \_\ \  ___/ \___ \  |  |  
+ |___  /\___  >____  > |__|  
+     \/     \/     \/        
+*/
+
+/* ? ********************** 3ยบ BLOCK (BEST VIEWS)**********************/
+
+div.best {
+    display: flex;
+    background-color: #131c29;
+    border-top: #29273F 4px solid;
+    border-bottom: #29273F 4px solid;
+}
+
+div.best-text {
+    flex: 1;
+    padding: 2% 3% 2% 3%;
+    background-color: #29273F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.best-text span {
+    font-size: 48px;
+    color: #fff;
+}
+
+div.best-list-container {
+    flex: 4;
+    margin: 3% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.best-item {
+    height: 100%;
+    flex: 0 1 30%;
+    padding: 5px 10px;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.best-item:hover {
+    transform: scale(1.1);
+}
+
+.best-item,
+.BI,
+.fecha {
+    background-color: #131c29;
+}
+
+.BI {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.BI-big {
+    display: none;
+}
+
+.fecha {
+    color: #585486;
+    font-size: 12px;
+    text-align: left;
+}
+
+img.BI {
+    height: 130px;
+    width: 150px;
+    margin: 10px 20px;
+    border-radius: 10%;
+}
+
+#best-item1 {
+    border: #e6c300 6px solid;
+    box-shadow: #8b7700 5px 4px 10px;
+}
+
+#best-item2 {
+    border: #C0C0C0 6px solid;
+    box-shadow: #616161 5px 4px 10px;
+}
+
+#best-item3 {
+    border: #cd7f32 6px solid;
+    box-shadow: #804f1f 5px 4px 10px;
+}
+
+
+@media (max-width: 1000px) {
+    div.best {
+        flex-direction: column;
+    }
+
+    .best-item {
+        max-width: 190px;
+        margin: 5px;
+    }
+
+    img.BI {
+        height: 80%;
+        width: 95%;
+        margin: 1% 2%;
+        border-radius: 10%;
+    }
+
+    .general-container {
+        display: flex;
+        flex-flow: row;
+        align-content: flex-start;
+    }
+
+    .BI {
+        flex: 1;
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    div.best-list-container {
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    .best-item {
+        margin: 10px;
+        max-width: none;
+        border-radius: 5%;
+    }
+
+    img.BI {
+        height: 20%;
+        width: 15%;
+    }
+
+}
+
+/* ? ********************** 3ยบ BLOCK END (BEST VIEWS) **********************/
+
+/* 
+        .__                             
+__  _  _|  |__ ___.__.     __ __  ______
+\ \/ \/ /  |  <   |  |    |  |  \/  ___/
+ \     /|   Y  \___  |    |  |  /\___ \ 
+  \/\_/ |___|  / ____|    |____//____  >
+             \/\/                    \/ 
+*/
+
+/* ? ********************** 4th BLOCK START (WHY US) ***********************/
+
+.why-us {
+    padding: 50px 15%;
+}
+
+.why-us-container {
+    display: flex;
+    align-items: center;
+    background-color: #031735;
+    padding: 2%;
+    margin-bottom: 50px;
+    border-radius: 7px;
+}
+
+.why-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-us-image>img {
+    max-width: 350px;
+}
+
+.why-us-text {
+    color: white;
+    flex: 2;
+    padding: 5%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@media (max-width: 1000px) {
+    .why-us-container {
+        flex-direction: column;
+    }
+
+    .why-us-image {
+        order: 1;
+    }
+
+    .why-us-text {
+        order: 2;
+    }
+
+    .why-us-image>img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-us {
+        padding: 50px 2%;
+    }
+
+    .why-us-image>img {
+        max-width: 250px;
+    }
+}
+
+/* ? ********************** 4th BLOCK END (WHY US) ***********************/
+
+/* 
+  _____              __                
+_/ ____\____   _____/  |_  ___________ 
+\   __\/  _ \ /  _ \   __\/ __ \_  __ \
+ |  | (  <_> |  <_> )  | \  ___/|  | \/
+ |__|  \____/ \____/|__|  \___  >__|   
+                              \/       
+*/
+
+/* ? ********************** 5th BLOCK END (FOOTER) ***********************/
+
+footer {
+    background-color: #02122b;
+    padding: 50px 10%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+footer>.left {
+    flex: 2;
+}
+
+.left > .logocontainer {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin-bottom: 50px;
+}
+
+.logocontainer > .logo {
+    max-width: 150px;
+    margin-right: 40px;
+}
+
+footer>.middle {
+    flex: 1;
+}
+
+footer>.right {
+    flex: 1;
+}
+
+.middle > ul, .right > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.middle > ul > a, .right > ul > a {
+    color: #fff;
+}
+
+.middle > ul > a:hover, .right > ul > a:hover {
+    color: #aaa;
+    transition-duration: 0.3s;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .left {
+        flex: 1;
+    }
+
+    .left > .logocontainer {
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .left > .logocontainer {
+        flex-direction: column;
+    }
+}
+
+/* ? ********************** 5th BLOCK END (FOOTER) ***********************/
+
+/*
+               __  .__       .__          
+_____ ________/  |_|__| ____ |  |   ____  
+\__  \\_  __ \   __\  |/ ___\|  | _/ __ \ 
+ / __ \|  | \/|  | |  \  \___|  |_\  ___/ 
+(____  /__|   |__| |__|\___  >____/\___  >
+     \/                    \/          \/ 
+*/
+
+/* ? ********************** ARTICLE **********************/
+
+.article-container-outer {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 7px;
+    margin: 5% 0;
+    padding: 10px;
+}
+
+.article-container-outer>h1,
+.article-container-outer>p.name {
+    align-self: flex-end;
+    text-align: right;
+    margin: 10px 25px 0 0;
+}
+
+.article-container {
+    display: flex;
+}
+
+.article-nav {
+    flex: 1.5;
+}
+
+.article-nav-inner {
+    background-color: #eee;
+    border-radius: 7px;
+    margin: 0 5%;
+    padding: 5px;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 20px;
+}
+
+.article-nav-inner>ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.article-nav-inner>ul>a {
+    color: #000;
+}
+
+.article-nav-inner>ul>a>li {
+    /* background-color: #fff; */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.article-nav-inner>ul>a>li:hover {
+    background-color: #ddd;
+    /* padding: 10px; */
+}
+
+.article-content-container {
+    flex: 4;
+    padding-bottom: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.article-media-main {
+    width: 100%;
+}
+
+.article-media {
+    display: flex;
+    justify-content: center;
+}
+
+.article-media>img {
+    width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+    .article-nav {
+        display: none;
+    }
+}
+
+
+/* ! ****************** CSS de ejemplo *******************/
+
+.grid-container {
+    font-family: Consolas;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.item {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* ? ********************** ARTICLE END **********************/
+
+
+
+/*
+  _____                     
+_/ ____\___________  _____  
+\   __\/  _ \_  __ \/     \ 
+ |  | (  <_> )  | \/  Y Y  \
+ |__|  \____/|__|  |__|_|  /
+                         \/
+*/
+/*? **** FORMULARIO *********************************************************/
+
+.formDiv {
+    display: flex;
+}
+.imgForm {
+    flex: 1 1 20%;
+    align-self: center;
+    padding: 5px;
+    border: 2px white solid;
+    border-radius:10%;
+}
+.FormFlex > h1{
+    text-align: center;
+}
+.FormFlex {
+    display: flex;
+    flex-direction: column;
+    background-color: #041f47;
+    border-radius: 7px;
+    margin: 5%  ;
+    padding: 10px;
+    flex: 1 1 80%;
+    align-self: center;
+    font-size: 1em;
+}
+
+div.titulo {
+    padding: 0 20% ;
+}
+
+input, label, .formcontainer {
+    align-self: center;
+}
+
+input, select {
+    height: 30px;
+    max-width: 800px;
+}
+
+input , select {
+    background-color: rgba(255, 255, 255, 0.856);
+}
+
+.formcontainer {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+
+    justify-content: center;
+    padding: 20px 10%;
+}
+
+label, .radio, #enviarFormulario, .FormFlex {
+    color: white;
+}
+
+label {
+    text-align: right;
+    padding: 0 5px;
+}
+
+
+.radio {
+    height: auto;
+    display: inline-block;
+}
+
+.terminos{
+    display: flex;
+    padding: 5px 20%;
+
+}
+input {
+    background-color: rgb(220, 255, 168);
+}
+
+input:invalid {
+    background-color: rgb(255, 125, 149);
+}
+
+#enviarFormulario {
+    margin-left: 20%;
+    background-color: #041f47;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#enviarFormulario:active {
+    background-color: rgb(100, 14, 30);
+}
+
+@media (max-width: 1000px) {
+    .imgForm { 
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px)
+{
+    .formcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 0 5%;
+    }
+
+    label {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+/*? **** FIN FORMULARIO *********************************************************/
+
+
+/*? **** AUDIO *********************************************************/
+
+
+audio {
+    width: 70%;
+}
+h1.audio{
+    align-self: center;
+    font-size: 40px;
+}
+a.audio {
+    font-size: 15px;
+}
+img.audio {
+    width: 100%;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.descarga {
+    border:rgb(4, 31, 71) 2px solid;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.article-content-container, .center {
+    align-content: center;
+}
+.center, .video, .center2 {
+    text-align: center;
+}
+.center{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+}
+
+video, iframe {
+    width: 80%;
+}
+
+iframe, video {
+    height: 300px;
+}
+
+
+
+
+/*? **** FIN AUDIO *********************************************************/
+
+/*
+.__           .__                              
+|  |__   ____ |  | ______   ___________  ______
+|  |  \_/ __ \|  | \____ \_/ __ \_  __ \/  ___/
+|   Y  \  ___/|  |_|  |_> >  ___/|  | \/\___ \ 
+|___|  /\___  >____/   __/ \___  >__|  /____  >
+     \/     \/     |__|        \/           \/ 
+*/
+
+/* ? ********************** HELPERS START **********************/
+
+.height-screen {
+    height: 100vh;
+}
+
+@media screen and (max-width: 1000px) {
+    .height-screen {
+        height: auto;
+    }
+}
+
+.background-animation {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1005%26quot%3b)' fill='none'%3e%3cpath d='M1127.8077442534077 372.08205238553285L1015.659527148771 466.1855799952231 1212.8889271156247 587.3561418473331z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M878.7695802624073 422.21174902064797L748.0628477838443 572.5726446750753 1029.1304759168345 552.9184814992111z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M883.1524087909007 75.4336886786048L660.447626323992-75.09158714210895 639.9680779233607 158.9907222140394z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M394.26961704847076 886.8617348250308L107.35429404600791 861.7598966704365 369.16777889387646 1173.7770578274935z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M153.809%2c115.223C190.153%2c114.404%2c223.713%2c95.724%2c241.86%2c64.225C259.978%2c32.776%2c260.961%2c-6.591%2c241.719%2c-37.365C223.486%2c-66.526%2c188.201%2c-76.414%2c153.809%2c-76.595C119.02%2c-76.778%2c83.38%2c-67.378%2c64.281%2c-38.3C43.332%2c-6.406%2c39.379%2c35.394%2c58.602%2c68.357C77.701%2c101.107%2c115.907%2c116.078%2c153.809%2c115.223' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1482.0238214047738 448.75057065028057L1641.8352485354565 402.9253813290274 1436.1986320835206 288.9391435195979z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1015.905%2c790.241C1060.239%2c790.89%2c1096.153%2c756.716%2c1116.227%2c717.181C1134.41%2c681.371%2c1129.082%2c640.273%2c1109.993%2c604.938C1089.723%2c567.416%2c1058.479%2c533.964%2c1015.905%2c531.477C969.352%2c528.757%2c922.197%2c551.361%2c900.632%2c592.707C880.272%2c631.743%2c898.351%2c676.293%2c920.541%2c714.318C942.49%2c751.931%2c972.361%2c789.604%2c1015.905%2c790.241' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1765.8651784855801 331.37788924779085L1587.226456510955 366.10173924918547 1800.5890284869747 510.01661122241615z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1473.673%2c969.688C1540.014%2c965.91%2c1585.722%2c912.333%2c1620.782%2c855.887C1658.714%2c794.818%2c1702.681%2c721.743%2c1666.131%2c659.837C1629.866%2c598.415%2c1544.958%2c604.21%2c1473.673%2c606.724C1408.474%2c609.023%2c1339.672%2c618.421%2c1303.371%2c672.629C1263.206%2c732.607%2c1258.468%2c811.851%2c1294.369%2c874.474C1330.443%2c937.398%2c1401.259%2c973.812%2c1473.673%2c969.688' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M364.0615459030146 818.2010604414088L566.3513793349342 982.3315905840626 605.894119307751 758.0735682783559z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1005'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+}
+
+pre.code {
+    background-color: #eee;
+    border-left: 5px solid #041F47;
+    padding: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+span.inline-code {
+    font-family: Consolas, 'monospace';
+    color: #f00;
+    background-color: #eee;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+ul.list>li {
+    padding: 10px 0;
+}
+
+/* ? ********************** HELPERS END **********************/
